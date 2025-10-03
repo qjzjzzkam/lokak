@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Asteria Cloud",
+    "tier": "Platinum",
+    "logo": "/images/sponsors/asteria.svg",
+    "href": "https://example.com/asteria"
+  },
+  {
+    "name": "Quanta Systems",
+    "tier": "Platinum",
+    "logo": "/images/sponsors/quanta.svg",
+    "href": "https://example.com/quanta"
+  },
+  {
+    "name": "Nova Capital",
+    "tier": "Gold",
+    "logo": "/images/sponsors/nova.svg",
+    "href": "https://example.com/nova"
+  },
+  {
+    "name": "Saffron Analytics",
+    "tier": "Gold",
+    "logo": "/images/sponsors/saffron.svg",
+    "href": "https://example.com/saffron"
+  },
+  {
+    "name": "Orbit Health",
+    "tier": "Gold",
+    "logo": "/images/sponsors/orbit.svg",
+    "href": "https://example.com/orbit"
+  },
+  {
+    "name": "GreenGrid Energy",
+    "tier": "Silver",
+    "logo": "/images/sponsors/greengrid.svg",
+    "href": "https://example.com/greengrid"
+  },
+  {
+    "name": "AgroSense",
+    "tier": "Silver",
+    "logo": "/images/sponsors/agrosense.svg",
+    "href": "https://example.com/agrosense"
+  },
+  {
+    "name": "Lumina Robotics",
+    "tier": "Silver",
+    "logo": "/images/sponsors/lumina.svg",
+    "href": "https://example.com/lumina"
+  },
+  {
+    "name": "Devfolio",
+    "tier": "Silver",
+    "logo": "/images/sponsors/devfolio.svg",
+    "href": "https://example.com/devfolio"
+  }
+]
