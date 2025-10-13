@@ -24,8 +24,8 @@
     "remark-gfm": "^4.0.1",
     "vfile": "^6.0.3",
     "vfile-message": "^4.0.3",
-    "zod": "^3.25.76"
-    "@gsap/react": "^2.1.0",
+    "zod": "^3.25.76",
+    "@gsap/react": "^2.1.0"
 
   },
   "devDependencies": {
