@@ -40,11 +40,7 @@ export default function ContactPage() {
             <h2 className="text-2xl md:text-3xl font-semibold">Organized By</h2>
             <p className="mt-3 text-neutral-200">
               SHV Groups<br />
-              Office of the CEO<br />
-              [Full Address], [City, State, Country]
-            </p>
-            <p className="mt-3 text-neutral-200">
-              In Partnership With: Utopian Space (SHV Creative Labs)
+              Delhi, India
             </p>
           </div>
 
