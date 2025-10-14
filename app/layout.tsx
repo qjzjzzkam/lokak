@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { defaultMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
+import RightClickMenu from "@/components/ui/RightClickMenu";
+import AppShell from "@/components/AppShell"; // new wrapper
 
 export const metadata: Metadata = defaultMetadata;
 
@@ -46,10 +48,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Preload above-the-fold media for faster LCP */}
         <link rel="preload" as="image" href="/media/hero-fallback.jpg" />
         <link rel="preload" as="video" href="/media/hero.mp4" type="video/mp4" />
+        {/* Poppins font import */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         {/* Structured data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body className="bg-[#0a0b12] text-white antialiased">
+      <body className="bg-[#0a0b12] text-white antialiased font-poppins">
         {/* Skip link for a11y */}
         <a
           href="#main"
@@ -58,10 +65,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
 
-        <Navbar />
-        {/* pad for fixed nav */}
-        <main id="main" className="pt-[64px]">{children}</main>
-        <Footer />
+        <AppShell>
+          <Navbar />
+          {/* pad for fixed nav */}
+          <main id="main">{children}</main>
+          <Footer />
+          <RightClickMenu />
+        </AppShell>
       </body>
     </html>
   );
