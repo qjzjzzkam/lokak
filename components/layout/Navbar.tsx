@@ -46,6 +46,21 @@ export default function Navbar() {
 		}, 300);
 	};
 
+	// Add variants for staggered animation
+	const navButtonsVariants = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.08,
+				delayChildren: 1.05, // match previous delay for container
+			},
+		},
+	};
+	const navButtonVariant = {
+		hidden: { opacity: 0, y: 12 },
+		visible: { opacity: 1, y: 0, transition: { duration: 0.22, ease: "easeOut" } },
+	};
+
 	return (
 		<AnimatePresence>
 			{show && (
@@ -104,15 +119,17 @@ export default function Navbar() {
 							</span>
 						</Link>
 					</motion.div>
+					{/* Staggered nav buttons */}
 					<motion.div
 						className="hidden lg:flex items-center gap-7 text-sm"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ delay: 1.05, duration: 0.5 }}
+						variants={navButtonsVariants}
+						initial="hidden"
+						animate="visible"
 					>
 						{NAV.map((item) => (
 							<motion.div
 								key={item.name}
+								variants={navButtonVariant}
 								whileHover={{
 									scale: 1.12,
 									color: "#8b5cf6",
@@ -131,6 +148,7 @@ export default function Navbar() {
 							</motion.div>
 						))}
 						<motion.div
+							variants={navButtonVariant}
 							whileHover={{
 								scale: 1.08,
 								boxShadow: "0 2px 12px rgba(139,92,246,0.18)",
